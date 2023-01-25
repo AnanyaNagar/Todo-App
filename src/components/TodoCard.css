@@ -1,0 +1,41 @@
+.card{
+    background-color: violet;
+    padding: 12px;
+    font-weight: bolder;
+    width: 50vw;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.card form{
+    padding-right: 10px;
+    width: 60%;
+}
+
+#todoEdit{
+    width: 100%;
+}
+
+#todoText{
+    padding-right: 10px;
+    width: 60%;
+}
+
+
+button{
+    padding: 10px;
+    margin: 1px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+

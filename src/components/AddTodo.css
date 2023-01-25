@@ -1,0 +1,34 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/* .row {
+    background-color: aqua;
+} */
+
+
+input {
+    width: 50vw;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    margin: 5px
+        /* resize: vertical; */
+}
+
+
+#todo-button {
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: bisque;
+    font-weight: bold;
+}
+
+#todo-button:hover{
+    color: black;
+    background-color: hotpink;
+}

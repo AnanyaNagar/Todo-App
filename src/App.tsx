@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AddTodo from './components/AddTodo';
+import { useState } from 'react';
+import { Todo } from './TodoModel';
+import TodoList from './components/TodoList';
 
-function App() {
+function App () {
+  const [newTodo, setNewTodo] = useState<string>("");
+  const [todos, setTodos] = useState<Todo[]>([]);
+
+  const addTodo = (e: React.FormEvent) => {
+    e.preventDefault();
+    setTodos([...todos, {id: Date.now(), text: newTodo, isDone: false}])
+    setNewTodo("");
+  } 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={{display: 'flex', justifyContent: 'center', margin: '50px 0 50px 0', fontSize: '3em'}}>
+        The Only Todo
+      </h1>
+      <AddTodo newTodo={newTodo} setNewTodo={setNewTodo} addTodo={addTodo}/>
+      <TodoList todos={todos} setTodos={setTodos}/>
     </div>
   );
 }
